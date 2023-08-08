@@ -1,0 +1,109 @@
+body{
+    background:#cfdac8;
+ }
+ .menu_button {
+    background: url(menu1.png) no-repeat scroll center center transparent;
+    background-color:#11698e;
+    padding:5px;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: 20px;
+    top: 20px;
+    text-indent: -9999px;
+    transition: all 0.3s;
+ }
+ .menu_button:hover {
+    background-color: #f37121;
+    cursor: pointer;
+ }
+ .menu_wrap {
+    background-color: #008891;
+    padding: 40px 0;
+    overflow: hidden;
+    transition: all 0.3s;
+    position: fixed;
+    width: 350px;
+    top: 0;
+    right: -350px;
+    bottom: 0;
+    z-index: 999;
+ }
+ .menu_overlay {
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 900;
+ }
+ .menu_close {
+    background: url(close.png) no-repeat scroll center center transparent;
+    background-color:#11698e;
+    opacity: 0;
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    right: 0;
+    top: 22px;
+    text-indent: -9999px;
+    transition: all 0.3s;
+    z-index: 1000;
+ }
+ .menu_close:hover {
+    background-color: #f37121;
+    cursor: pointer;
+ }
+ .menu_wrap:hover > .menu_close {
+    opacity: 1;
+ }
+ .menu_toggle {
+    display: none;
+ }
+ .menu_toggle:checked + .menu_wrap {
+    right: 0;
+ }
+ .menu_toggle:checked ~ .menu_overlay {
+    display: block;
+ }
+ .menu_list {
+    margin-top:20px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: inherit;
+    display: block;
+    overflow: hidden;
+ }
+ .menu_wrap:hover .menu_list {
+    overflow-y: auto;
+ }
+ .menu_list {
+    list-style-type: none;
+ }
+ .menu_list li {
+    display: block;
+ }
+ .menu_list li:first-child {
+    border-top: medium none;
+ }
+ .menu_list li a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 18px;    
+    color: #FFF;
+    text-decoration: none;
+ }
+ .menu_list li a:hover {
+    color: #000;
+    background: #ffba93;
+ }
+ page_content{
+    margin:10px;
+    padding:10px;
+    margin-top:55px;
+ }
